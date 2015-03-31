@@ -1,0 +1,36 @@
+snippet dS
+	function dSpaced, a, b, n
+	    return, dindgen(n+1)*double(b-a)/n + a
+	end
+snippet	int
+	function integrate, func, pts
+	    dx = pts[1:*] - pts
+	    ay = (func[1:*]+func)/2.0
+	    return, total(ay*dx, /double)
+	end
+snippet n_
+	n_elements(${1})${2}
+snippet for
+	for ${1:i} = ${2:0}, ${3} do begin
+	    ${4}
+	endfor
+snippet forn
+	for ${1:i} = ${2:0}, n_elements(${3}) do begin
+	    ${4}
+	endfor
+snippet pro
+	pro 'Filename()'
+	    ${1}
+	end
+snippet plotpsx
+	if (thi gt 2) then begin
+	    set_plot,'ps'
+	    device,/encapsulate,filename='${1}.ps'
+	endif else begin
+	    set_plot,'x'
+	endelse
+	!x.thick=thi
+	!y.thick=thi
+	plot,${2}
+	    thick=thi,charthick=thi,charsize=1.8${3}
+	if (thi gt 2) then device,/close
