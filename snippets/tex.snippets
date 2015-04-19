@@ -158,3 +158,13 @@ snippet figure
 	\label{${4}}
 	\end{figure}
 	${5}
+snippet letter
+	\documentclass{letter}
+	\address{Brian Pomerantz \\ 411 Martin Terrace \\ State College, PA 16803}
+	\signature{Brian Pomerantz}
+	\begin{document}
+	\begin{letter}{[Address of Recipient}
+	\opening{Re:~~~~[Subject] \\ \\ To Whom It May Concern:}
+	${1}
+	\end{letter}
+	\end{document}
