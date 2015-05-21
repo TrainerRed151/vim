@@ -160,11 +160,12 @@ snippet figure
 	${5}
 snippet letter
 	\documentclass{letter}
-	\address{Brian Pomerantz \\ 411 Martin Terrace \\ State College, PA 16803}
-	\signature{Brian Pomerantz}
+	\address{${1:Brian Pomerantz \\ 411 Martin Terrace \\ State College, PA 16803}}
+	\signature{${2:Brian Pomerantz}}
 	\begin{document}
-	\begin{letter}{[Address of Recipient}
-	\opening{Re:~~~~[Subject] \\ \\ To Whom It May Concern:}
-	${1}
+	\begin{letter}{${3:[Address of Recipient]}}
+	\opening{Re:~~~~${4:[Subject]} \\ \\ ${5:To Whom It May Concern:}}
+	${7}
+	\closing{${6:Sincerely,}}
 	\end{letter}
 	\end{document}
