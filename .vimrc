@@ -8,6 +8,8 @@ set autoindent
 set nohlsearch
 set mouse=a
 set ruler
+syntax on
+colo default
 "au BufRead,BufNewFile *.tex setlocal spell spelllang=en_us
 "set nospell
 map <F1> :setlocal spell spelllang=en_us<cr>
