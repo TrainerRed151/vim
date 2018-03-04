@@ -1,6 +1,5 @@
 snippet main
-	public static void main (String [] args)
-	{
+	public static void main (String[] args) {
 		${1:/* code */}
 	}
 snippet pu
@@ -41,17 +40,29 @@ snippet j.n
 snippet j.m
 	java.math.
 snippet if
-	if (${1}) ${2}
+	if (${1}) {
+	    ${2}
+	}	
 snippet el
-	else 
+	else {
+	    ${1}
+	}
 snippet elif
-	else if (${1}) ${2}
+	else if (${1}) {
+	    ${2}
+	}
 snippet wh
-	while (${1}) ${2}
+	while (${1}) {
+	    ${2}
+	}
 snippet for
-	for (${1}; ${2}; ${3}) ${4}
+	for (int ${1:i} = ${2:0}; $1 < ${3:count}; $1${4:++}) {
+	    ${5}
+	}
 snippet fore
-	for (${1} : ${2}) ${3}
+	for (${1} : ${2}) {
+	    ${3}
+	}
 snippet sw
 	switch (${1}) ${2}
 snippet cs
