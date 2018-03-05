@@ -74,7 +74,9 @@ snippet tc
 snippet t
 	public void test${1:Name}() throws Exception ${2}
 snippet cl
-	class ${1:`Filename("", "untitled")`} ${2}
+	class ${1:`Filename("", "untitled")`} {
+	    ${2}
+	}
 snippet in
 	interface ${1:`Filename("", "untitled")`} ${2:extends Parent}${3}
 snippet m
@@ -91,3 +93,11 @@ snippet println
 	System.out.println(${1});${2}
 snippet print
 	System.out.print(${1});${2}
+snippet fun
+	${1:public} ${2:void} ${3:method}(${3}) {
+	    ${4}
+	}
+snippet funs
+	${1:public} static ${2:void} ${3:method}(${3}) {
+	    ${4}
+	}
