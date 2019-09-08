@@ -84,3 +84,7 @@ snippet ifmain
 # __magic__
 snippet _
 	__${1:init}__${2}
+snippet ipdb
+	import ipdb; ipdb.set_trace()
+snippet rdb
+	from celery.contrib import rdb; rdb.set_trace()
