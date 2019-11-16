@@ -22,3 +22,5 @@ map <F5> :! open %:r.pdf<cr>
 map <F8> :! dvilualatex %<cr> :! dvipdf %:r.dvi<cr>
 
 filetype plugin on
+
+let python_highlight_all = 1
