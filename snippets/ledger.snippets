@@ -1,0 +1,23 @@
+snippet settle
+	${1:2024}/${2:01}/${3:01} * Deposit - ${4:A. Adams} Settlement
+	    Liabilities:IOLTA:$4  $-${5}  ; Client: $4
+	    Assets:IOLTA${6}
+
+snippet iolta
+	${1:2024}/${2:01}/${3:01} * (${4}) Pomerantz and Crosby, Co., L.P.A. - ${5:A. Adams}
+	    Assets:IOLTA  $-$6
+	    Liabilities:IOLTA:$5  $${6:1,000.00}  ; Client: $5
+	    Income:Attorney Fee  $-$6  ; Client: $5
+	    Assets:Office
+
+	$1/$2/$3 * (${7}) Pomerantz and Crosby, Co., L.P.A. - $5
+	    Assets:IOLTA  $-$8
+	    Liabilities:IOLTA:$5  $${8:100.00}  ; Client: $5
+	    Expenses:Case Exp Adv  $-$8  ; Client: $5
+	    Assets:Office
+	${9}
+
+snippet client 
+	${1:2024}/${2:01}/${3:01} * (${4}) ${5:Abigail Adams} - Client
+	    Liabilities:IOLTA:${6:A. Adams}  $${7}  ; Client: $6
+	    Assets:IOLTA${8}
